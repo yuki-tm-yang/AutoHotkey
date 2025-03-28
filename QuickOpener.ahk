@@ -1,4 +1,12 @@
-﻿^1:: {
+﻿^`:: {
+    if WinExist("ahk_exe C:\Users\ytm19\AppData\Local\Programs\obsidian\Obsidian.exe") {
+        WinActivate
+    } else {
+        Run "C:\Users\ytm19\AppData\Local\Programs\obsidian\Obsidian.exe"
+    }
+}
+
+^1:: {
     if WinExist("ahk_exe chrome.exe") {
         WinActivate
     } else {
@@ -22,19 +30,11 @@
     }
 }
 
-^`:: {
-    if WinExist("ahk_exe C:\Users\ytm19\AppData\Local\Programs\obsidian\Obsidian.exe") {
-        WinActivate
-    } else {
-        Run "C:\Users\ytm19\AppData\Local\Programs\obsidian\Obsidian.exe"
-    }
-}
-
 ^4:: {
-    if WinExist("ahk_class TaskManagerWindow") {
+    if WinExist("ahk_exe Notion.exe") {
         WinActivate
     } else {
-        Run "taskmgr.exe"
+        Run "C:\Users\ytm19\AppData\Local\Programs\Notion\Notion.exe"
     }
 }
 
@@ -54,3 +54,10 @@
     }
 }
 
+^7:: {
+    if WinExist("ahk_class TaskManagerWindow") {
+        WinActivate
+    } else {
+        Run "taskmgr.exe"
+    }
+}
