@@ -1,4 +1,11 @@
-﻿^`:: {
+﻿; ========== Modifier Key Remap ==========
+LAlt::LCtrl     ; Left Alt → Left Ctrl
+LWin::LAlt      ; Left Win → Left Alt
+LCtrl::LWin     ; Left Ctrl → Left Win
+
+; ========== App Launcher Hotkeys ==========
+
+^0:: {
     if WinExist("ahk_exe C:\Users\ytm19\AppData\Local\Programs\obsidian\Obsidian.exe") {
         WinActivate
     } else {
@@ -7,10 +14,10 @@
 }
 
 ^1:: {
-    if WinExist("ahk_exe chrome.exe") {
+    if WinExist("ahk_exe Zen.exe") {
         WinActivate
     } else {
-        Run "chrome.exe"
+        Run "Zen.exe"
     }
 }
 
@@ -30,11 +37,19 @@
     }
 }
 
-^4:: {
+^`:: {
     if WinExist("ahk_exe Notion.exe") {
         WinActivate
     } else {
         Run "C:\Users\ytm19\AppData\Local\Programs\Notion\Notion.exe"
+    }
+}
+
+^4:: {
+    if WinExist("ahk_exe C:\Program Files\Epic Games\UE_5.5\Engine\Binaries\Win64\UnrealEditor.exe") {
+        WinActivate
+    } else {
+        Run "C:\Program Files\Epic Games\UE_5.5\Engine\Binaries\Win64\UnrealEditor.exe"
     }
 }
 
@@ -59,5 +74,13 @@
         WinActivate
     } else {
         Run "taskmgr.exe"
+    }
+}
+
+^8:: {
+    if WinExist("ahk_exe shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App") {
+        WinActivate
+    } else {
+       Run "shell:AppsFolder\5319275A.WhatsAppDesktop_cv1g1gvanyjgm!App"
     }
 }
